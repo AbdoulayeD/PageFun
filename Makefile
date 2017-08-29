@@ -1,3 +1,5 @@
+DIR= /Users/diarafdiop/Documents/machineLearningCode/PageRank
+DATA_DIR= /Users/diarafdiop/Documents/machineLearningCode/datasets/PageRank
 CC= gcc-7
 CXX= g++-7
 CFLAGS= -I./headers
@@ -8,7 +10,8 @@ TARGET= customPRImp
 CLOG= $(TARGET).clog
 ELOG= $(TARGET).elog
 
-ALLC: compC execC clean
+
+ALLC: compC execC
 ALLCXX: compCXX execCXX clean
 
 compC:
@@ -26,5 +29,8 @@ execCXX:
 show:
 	vim $(ELOG) 
 
+printData:
+	vim $(DATA_DIR)/hollins.dat
 clean:
 	rm *.exe
+	rm *log
