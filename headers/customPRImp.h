@@ -8,7 +8,7 @@ void nodeList(char* filename) //site List for a classical pageRank
 {
   char dimLine[MAX_LINE_SIZE]; // Dimenstion Line Tab
   int dim[2]; // Dimension Integer Tab
-  int it, i = 0; // iterators
+  int it, i; // iterators
   char line[MAX_LINE_SIZE];//
   char* token;
   char delim[2] = " ";
@@ -25,6 +25,7 @@ void nodeList(char* filename) //site List for a classical pageRank
   */
 
   //recovering the dimension
+  it = 0;
   fgets(dimLine, 100, dataset);
 
   token = strtok(dimLine, delim);
@@ -39,7 +40,6 @@ void nodeList(char* filename) //site List for a classical pageRank
   char nodeName[dim[0]][MAX_LINE_SIZE];
 
   printf("-->Datasets :\n");
-
   //while(1){
   for(i = 0; i < dim[0]; i++)
   {
